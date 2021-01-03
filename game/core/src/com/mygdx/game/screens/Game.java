@@ -11,10 +11,7 @@ import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.*;
 import com.mygdx.game.controllers.CPUController;
 import com.mygdx.game.controllers.PlayerController;
-import com.mygdx.game.entities.Ball;
-import com.mygdx.game.entities.Entity;
-import com.mygdx.game.entities.LeftPlayer;
-import com.mygdx.game.entities.RightPlayer;
+import com.mygdx.game.entities.*;
 import com.mygdx.game.listeners.TouchListener;
 import com.mygdx.game.listeners.TransitionListener;
 import com.mygdx.game.listeners.WorldContactListener;
@@ -57,7 +54,7 @@ public class Game implements Screen {
         this.singlePlayer = singlePlayer;
         float buttonW = Gdx.graphics.getWidth() * 0.072f;
         float buttonH = Gdx.graphics.getHeight() * 0.13f;
-        exitButton = new Button(Gdx.graphics.getWidth()/2f -buttonW/2f, Gdx.graphics.getHeight()-buttonH, buttonW, buttonH) {
+        exitButton = new Button(Gdx.graphics.getWidth() / 2f - buttonW / 2f, Gdx.graphics.getHeight() - buttonH, buttonW, buttonH) {
             @Override
             public void onClick() {
                 transitionListener.transition(new Menu());
@@ -125,15 +122,16 @@ public class Game implements Screen {
         PolygonShape goalShape = new PolygonShape();
         goalShape.setAsBox(.5f * aspect, 8.7890625f, new Vector2(5.6640625f * aspect, 49.804688f), 0);
         goalDef.shape = goalShape;
-        goals.createFixture(goalDef).setUserData("LEFT_GOAL");
+        goals.createFixture(goalDef).setUserData(EntityTypes.LEFT_GOAL);
         goalShape.setAsBox(.5f * aspect, 8.7890625f, new Vector2(94.33594f * aspect, 49.804688f), 0);
-        goals.createFixture(goalDef).setUserData("RIGHT_GOAL");
+        goals.createFixture(goalDef).setUserData(EntityTypes.RIGHT_GOAL);
         goalShape.dispose();
 
     }
 
     /**
      * Called when a player scores
+     *
      * @param left
      */
     public void score(boolean left) {
@@ -158,8 +156,8 @@ public class Game implements Screen {
         }
 
         // Check if exit button is pressed
-        for(TouchListener.TouchInfo touch: TouchListener.getInstance().getTouchInfos()) {
-            if(touch.isTouched() && exitButton.isInside(touch.getStartX(), touch.getStartY())) {
+        for (TouchListener.TouchInfo touch : TouchListener.getInstance().getTouchInfos()) {
+            if (touch.isTouched() && exitButton.isInside(touch.getStartX(), touch.getStartY())) {
                 exitButton.onClick();
                 break;
             }
@@ -186,11 +184,11 @@ public class Game implements Screen {
             for (Entity e : entities) {
                 e.tick();
             }
-            if(timeLeft <= 0) gameOverTimer = 5f;
+            if (timeLeft <= 0) gameOverTimer = 5f;
         }
-        if(gameOverTimer > 0) {
-            gameOverTimer-= frameTime;
-            if(gameOverTimer <= 0) {
+        if (gameOverTimer > 0) {
+            gameOverTimer -= frameTime;
+            if (gameOverTimer <= 0) {
                 resetPositions = true;
                 score.reset();
                 timeLeft = 180f;
@@ -239,17 +237,17 @@ public class Game implements Screen {
             batch.draw(goal, screenW * .25f, screenH * .25f, screenW / 2f, screenH / 2f);
         }
 
-        if(gameOverTimer > 0) {
+        if (gameOverTimer > 0) {
             text = "GAME OVER";
-            font.draw(batch, text, screenW /2f - getGlyphWidth(text) /2f, screenH * 0.85f);
-            if(score.right > score.left) {
+            font.draw(batch, text, screenW / 2f - getGlyphWidth(text) / 2f, screenH * 0.85f);
+            if (score.right > score.left) {
                 text = "GAUCHE GAGNE";
             } else if (score.right < score.left) {
                 text = "DROITE GAGNE";
             } else {
                 text = "MATCH NUL";
             }
-            font.draw(batch, text, screenW /2f - getGlyphWidth(text) /2f, screenH/2f - font.getLineHeight()/2f);
+            font.draw(batch, text, screenW / 2f - getGlyphWidth(text) / 2f, screenH / 2f - font.getLineHeight() / 2f);
         }
     }
 

@@ -82,6 +82,7 @@ public abstract class Entity {
 
     /**
      * This will create the Box2D body for the entity.
+     *
      * @param physics reference to the World object.
      */
     public void createBody(World physics) {
@@ -107,6 +108,7 @@ public abstract class Entity {
 
     /**
      * Accelerates the entity in the given direction, limits according to maxSpeed
+     *
      * @param x
      * @param y
      */

@@ -16,6 +16,6 @@ public class Ball extends Entity {
     @Override
     public void createBody(World physics) {
         super.createBody(physics);
-        getBody().getFixtureList().get(0).setUserData("BALL");
+        getBody().getFixtureList().get(0).setUserData(EntityTypes.BALL);
     }
 }

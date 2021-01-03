@@ -3,7 +3,7 @@ package com.mygdx.game.controllers;
 import com.badlogic.gdx.math.Vector2;
 import com.mygdx.game.entities.Entity;
 
-public class CPUController implements Controller{
+public class CPUController implements Controller {
     private Entity ball;
     private Vector2 target;
     private float speed = 50f;

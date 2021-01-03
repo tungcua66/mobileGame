@@ -3,7 +3,6 @@ package com.mygdx.game.screens;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.math.Vector2;
 import com.mygdx.game.listeners.TouchListener;
 import com.mygdx.game.listeners.TransitionListener;
@@ -18,7 +17,6 @@ public class Menu implements Screen {
     private float menuW;
     private float menuH;
     private Vector2 menuPos;
-    private ShapeRenderer sr;
 
 
     public Menu() {
@@ -26,7 +24,6 @@ public class Menu implements Screen {
         menuH = Gdx.graphics.getHeight() * .8f;
         float menuItemH = menuH / 4f;
         menuPos = new Vector2(Gdx.graphics.getWidth() / 2f - menuW / 2f, Gdx.graphics.getHeight() / 2f - menuH / 2f);
-        sr = new ShapeRenderer();
         buttons = new ArrayList<>();
 
         buttons.add(new Button(menuPos.x, menuPos.y, menuW, menuItemH) {

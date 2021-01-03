@@ -4,6 +4,8 @@ import com.badlogic.gdx.physics.box2d.*;
 import com.mygdx.game.screens.Game;
 import com.mygdx.game.util.SoundUtil;
 
+import static com.mygdx.game.entities.EntityTypes.*;
+
 public class WorldContactListener implements ContactListener {
 
     private Game game;
@@ -17,20 +19,20 @@ public class WorldContactListener implements ContactListener {
         Fixture a = contact.getFixtureA();
         Fixture b = contact.getFixtureB();
         if (a.getUserData() == null || b.getUserData() == null) return;
-        if (a.getUserData().equals("BALL")) {
-            if (b.getUserData().equals("LEFT_GOAL")) {
+        if (a.getUserData().equals(BALL)) {
+            if (b.getUserData().equals(LEFT_GOAL)) {
                 game.score(false);
-            } else if (b.getUserData().equals("RIGHT_GOAL")) {
+            } else if (b.getUserData().equals(RIGHT_GOAL)) {
                 game.score(true);
-            } else if (b.getUserData().equals("PLAYER")) {
+            } else if (b.getUserData().equals(PLAYER)) {
                 SoundUtil.getInstance().play("shoot");
             }
-        } else if (b.getUserData().equals("BALL")) {
-            if (a.getUserData().equals("LEFT_GOAL")) {
+        } else if (b.getUserData().equals(BALL)) {
+            if (a.getUserData().equals(LEFT_GOAL)) {
                 game.score(false);
-            } else if (a.getUserData().equals("RIGHT_GOAL")) {
+            } else if (a.getUserData().equals(RIGHT_GOAL)) {
                 game.score(true);
-            } else if (b.getUserData().equals("PLAYER")) {
+            } else if (b.getUserData().equals(PLAYER)) {
                 SoundUtil.getInstance().play("shoot");
             }
         }

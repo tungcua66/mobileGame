@@ -15,6 +15,6 @@ public class RightPlayer extends Entity {
     @Override
     public void createBody(World physics) {
         super.createBody(physics);
-        getBody().getFixtureList().get(0).setUserData("PLAYER");
+        getBody().getFixtureList().get(0).setUserData(EntityTypes.PLAYER);
     }
 }

@@ -11,16 +11,12 @@ public class PlayerController implements Controller {
     private int[] buttons;
     private float speed = 60f;
     private Vector2 controllerCenter;
-    private float radius;
     private float radiusSq;
-    private float controllerScale;
 
     public PlayerController(int u, int d, int l, int r, Vector2 controllerCenter, float radius) {
         buttons = new int[]{u, d, l, r};
         this.controllerCenter = controllerCenter.cpy();
-        this.radius = radius;
         this.radiusSq = radius * radius;
-        this.controllerScale = 1 / radius * speed;
     }
 
     @Override

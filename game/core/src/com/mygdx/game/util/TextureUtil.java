@@ -43,7 +43,7 @@ public class TextureUtil {
         int border = (int) (Gdx.graphics.getWidth() * (0.0029296875f));
         parameter.size = size;
         parameter.color = new Color(1f, 1f, 0f, 0.75f);
-        parameter.borderWidth = 3;
+        parameter.borderWidth = border;
         parameter.borderColor = new Color(0f, 0f, 0f, 0.75f);
         gameFont = generator.generateFont(parameter);
         generator.dispose();

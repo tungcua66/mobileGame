@@ -7,8 +7,8 @@ Project: football application for Android/Desktop mode
 
 Description: All the description is included in football_game.docx
 
-Version of Java required: java 8, please dont test with OpenJDK-11 or something greater than java 8. Why? : because LibGDX dont work with
-version > 8 :(
+Version of Java required: java 8, please dont test with OpenJDK-11 or something greater than java 8. 
+Why?: because LibGDX dont work with version > 8 :(
 How to install java 8: sudo apt-get install openjdk-8-jdk-openjdk-8-jre
 Set default java verion: sudo update-alternatives --config java and then choose the version java 8
 
@@ -43,6 +43,7 @@ Joueur à droite: les flèches
 ##Comment tester##
 Avant: il ne faut pas oublier de préciser le bon chemin pour le SDK(fichier local.properties)
 1. placez-vous dans le fichier principal, puis ./gladlew desktop:run
-2. importer le fichier src dans InteliJ ou peu n'importe quel IDE, puis clique droite sur desktopLauncher et Run
+2. importer le fichier src dans InteliJ ou peu n'importe quel IDE, puis clique droite sur 
+desktopLauncher et Run
 
 --AMUSEZ-VOUS BIEN AVEC LE JEU--

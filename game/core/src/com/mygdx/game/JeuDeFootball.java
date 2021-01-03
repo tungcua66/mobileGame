@@ -49,9 +49,20 @@ public class JeuDeFootball extends ApplicationAdapter {
     }
 
     @Override
+    public void pause() {
+        TextureUtil.getInstance().dispose();
+        SoundUtil.getInstance().dispose();
+    }
+
+    @Override
+    public void resume() {
+        TextureUtil.getInstance().load();
+        SoundUtil.getInstance().init();
+    }
+
+    @Override
     public void dispose() {
-		TextureUtil.getInstance().dispose();
-		SoundUtil.getInstance().dispose();
+
     }
 
 

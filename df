@@ -1,0 +1,41 @@
+[33mcommit ea1e766554830c942dad37fb329206874d2546d6[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: TRAN <manh-bach-tung.tran5@etu.univ-lorraine.fr>
+Date:   Sun Jan 3 16:40:34 2021 +0100
+
+    edit readme so we can read it easily on gitlab
+
+[33mcommit f12ec3540408963d27d081f34409a66f7e4eced8[m
+Author: TRAN <manh-bach-tung.tran5@etu.univ-lorraine.fr>
+Date:   Sun Jan 3 16:38:06 2021 +0100
+
+    add readme.txt
+
+[33mcommit 36e361eca0de15c4ea71dc44c12a7fd732153647[m
+Author: TRAN <manh-bach-tung.tran5@etu.univ-lorraine.fr>
+Date:   Sun Jan 3 15:44:17 2021 +0100
+
+    add a documentation for the game, i hope i can do the french version in time
+
+[33mcommit f6ed7c18c67a3b179cf45b398eeb0e5b81ad2a32[m
+Author: TRAN <manh-bach-tung.tran5@etu.univ-lorraine.fr>
+Date:   Sun Jan 3 15:25:19 2021 +0100
+
+    Replace new file JeuDe...java to display more efficiently
+
+[33mcommit 7079a75160cfb3082505b6f99501498cded983e3[m
+Author: TRAN <manh-bach-tung.tran5@etu.univ-lorraine.fr>
+Date:   Sun Jan 3 15:17:50 2021 +0100
+
+    add EntityTypes.java
+
+[33mcommit 659e677c939cdfc4cefcb8c9fb71349a86e8eb75[m
+Author: TRAN <manh-bach-tung.tran5@etu.univ-lorraine.fr>
+Date:   Sun Jan 3 15:09:55 2021 +0100
+
+    make all the code cleaner
+
+[33mcommit f93863b6085faeb2b6382905c2bdcbaa0a244014[m
+Author: TRAN <manh-bach-tung.tran5@etu.univ-lorraine.fr>
+Date:   Sun Jan 3 13:26:21 2021 +0100
+
+    Initial commit

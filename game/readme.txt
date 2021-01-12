@@ -42,7 +42,7 @@ Joueur à droite: les flèches
 
 ##Comment tester##
 Avant: il ne faut pas oublier de préciser le bon chemin pour le SDK(fichier local.properties)
-1. placez-vous dans le fichier principal, puis ./gladlew desktop:run
+1. placez-vous dans le fichier principal, puis ./gradlew desktop:run
 2. importer le fichier src dans InteliJ ou peu n'importe quel IDE, puis clique droite sur 
 desktopLauncher et Run
 
